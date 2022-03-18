@@ -45,7 +45,6 @@ app.put('/api/games/:id', (req, res) => {
 		res.status(400).send(error.details[0].message);
 		return;
 	}
-
 	game.genre = req.body.genre;
 	game.name = req.body.name;
 	res.send(game);
@@ -65,7 +64,6 @@ app.post('/api/games', (req, res) => {
 		res.status(400).send(error.details[0].message);
 		return;
 	}
-
 	const game =
 	 {
 		id: games.length + 1,
@@ -77,6 +75,32 @@ app.post('/api/games', (req, res) => {
 }
 );
 // ****************************************************************************************
+
+// ********************************** PUT Request **********************************
+app.put('/api/games/:id', (req, res) => {
+	const game = games.find((c) => c.id === parseInt(req.params.id));
+	if (!game) {
+		res.status(404).send('The game with this id was not found...');
+		return;
+	}
+
+	// Input Validation with joi package
+	const schema = {
+		genre: Joi.string().required(),
+		name: Joi.string().min(3).required(),
+	};
+	const result = Joi.validate(req.body, schema);
+	if (result.error) {
+		res.status(400).send(error.details[0].message);
+		return;
+	}
+
+	game.genre = req.body.genre;
+	game.name = req.body.name;
+	res.send(game);
+});
+// ****************************************************************************************
+
 // PORTs
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
