@@ -77,6 +77,20 @@ app.post('/api/games', (req, res) => {
 );
 // ****************************************************************************************
 
+// ********************************** DELETE Request **********************************
+app.delete('/api/games/:id', (req, res) => {
+	const game = games.find((c) => c.id === parseInt(req.params.id));
+	if (!game) {
+		res.status(404).send('The game with this id was not found...');
+		return;
+	}
+
+	const index = games.indexOf(game);
+	games.splice(index, 1);
+	res.send(game);
+});
+// ****************************************************************************************
+
 // PORTs
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
