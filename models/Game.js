@@ -28,5 +28,12 @@ const validate_schema = joi.object({
 	rating: joi.number().min(0.0).max(10.0),
 });
 
+const schema_for_update = joi.object({
+	name: joi.string().min(3).max(50),
+	genres: joi.objectId(),
+	rating: joi.number().min(0.0).max(10.0),
+});
+
 module.exports.Game = Game;
 module.exports.schema = validate_schema;
+module.exports.schema_for_update = schema_for_update;
