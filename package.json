@@ -1,19 +1,28 @@
 {
-  "name": "task_01",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.3",
-    "joi": "^13.1.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+	"name": "test5_project",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.3",
+		"joi": "^13.7.0",
+		"mongoose": "^6.3.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/muhammedhani/test5_project.git"
+	},
+	"bugs": {
+		"url": "https://github.com/muhammedhani/test5_project/issues"
+	},
+	"homepage": "https://github.com/muhammedhani/test5_project#readme",
+	"description": ""
 }
