@@ -5,6 +5,7 @@ joi.objectId = require('joi-objectid')(joi);
 const home = require('./routes/home');
 const games = require('./routes/games');
 const genres = require('./routes/genres');
+const customer = require("./routes/customer")
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
 app.use('/', home);
 app.use('/api/games', games);
 app.use('/api/genres',genres);
+app.use("/api/customer",customer)
 // other endpoints...
 
 module.exports = app;
