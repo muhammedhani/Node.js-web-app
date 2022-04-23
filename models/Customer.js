@@ -31,6 +31,12 @@ const validate_schema = joi.object({
 	email: joi.string().min(5).max(50).required(),
 	password: joi.string().min(8).max(20).required(),
 });
+const schema_for_update = joi.object({
+	name: joi.string().min(3).max(50),
+	email: joi.string().min(5).max(50),
+	password: joi.string().min(8).max(20),
+});
 
 module.exports.Customer = Customer;
 module.exports.schema = validate_schema;
+module.exports.schema_for_update = schema_for_update;
