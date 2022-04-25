@@ -252,7 +252,7 @@
 		{
 			"name": "deployment-test",
 			"request": {
-				"url": "https://test5-project.herokuapp.com/api/customers",
+				"url": "https://nodejs-web-app-project.herokuapp.com/api/games",
 				"method": "GET",
 				"header": [],
 				"body": {},
