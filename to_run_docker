@@ -1,0 +1,2 @@
+docker pull muhammedhani/nodejs-web-app
+docker run -p 8080:8080 -d muhammedhani/nodejs-web-app
