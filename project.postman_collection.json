@@ -1,0 +1,264 @@
+{
+	"variables": [],
+	"info": {
+		"name": "project",
+		"_postman_id": "adf16225-ef98-329f-77e3-33142daa1616",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customerPOST",
+			"request": {
+				"url": "http://localhost:8080/api/customer",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Murad\", \n\t\"email\": \"mohamed.mh@gmail.com\",\n\t\"password\": \"12345678\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "customerGET",
+			"request": {
+				"url": "http://localhost:8080/api/customer",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "customerPATCH",
+			"request": {
+				"url": "http://localhost:8080/api/customer/625f166ed5908ae2d8c7e474",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"recanguine\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "customerDELETE",
+			"request": {
+				"url": "http://localhost:8080/api/customer/",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "gamePOST",
+			"request": {
+				"url": "http://localhost:8080/api/games/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"CoD\", \n\t\"genres\": [\"625da573acc36705bb2e61f6\", \"625da553acc36705bb2e61f4\"], \n\t\"rating\": 5.5\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "gameGET",
+			"request": {
+				"url": "http://localhost:8080/api/games/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status\": \"in-progress\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "gamePATCH",
+			"request": {
+				"url": "http://localhost:8080/api/games/625f16f6d5908ae2d8c7e480",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Claw\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "gamePATCH_addGenre",
+			"request": {
+				"url": "http://localhost:8080/api/games/625f16f6d5908ae2d8c7e480",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"genres\": \"625f17ab51b99e521eeaab6a\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "gameDELETE",
+			"request": {
+				"url": "http://localhost:8080/api/games/625f16f6d5908ae2d8c7e480",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerId\": \"625ae0c765f988b18ae8c8cc\", \n\t\"gameId\": \"6250d2ac50e19e6a905a26d6\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "genrePOST",
+			"request": {
+				"url": "http://localhost:8080/api/genres",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"historical\", \n\t\"description\": \"Bla Bla Bla Bla Bla\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "genreGET",
+			"request": {
+				"url": "http://localhost:8080/api/genres/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status\": \"in-progress\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "genrePATCH",
+			"request": {
+				"url": "http://localhost:8080/api/genres/625f17ab51b99e521eeaab6a",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"sports\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "genreDELETE",
+			"request": {
+				"url": "http://localhost:8080/api/genres",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerId\": \"625ae0c765f988b18ae8c8cc\", \n\t\"gameId\": \"6250d2ac50e19e6a905a26d6\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deployment-test",
+			"request": {
+				"url": "https://test5-project.herokuapp.com/api/customers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
