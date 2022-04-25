@@ -6,11 +6,16 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node index.js"
 	},
+	"engines": {
+		"node": "16.14.0"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"compression": "^1.7.4",
 		"express": "^4.17.3",
+		"helmet": "^5.0.2",
 		"joi": "^13.7.0",
 		"joi-objectid": "^4.0.2",
 		"mongoose": "^6.3.0"

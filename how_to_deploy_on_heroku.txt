@@ -1,0 +1,33 @@
+1. Install packages: helmet, compression
+
+2. add to package.json:
+	in scripts:
+	"start": "node index.js"
+   and add another option:
+	"engines": {
+		"node": "16.14.0"
+	}, 
+
+3. download and install heroku cli
+
+4. in cmd: heroku login
+
+5. heroku create <name>
+
+6. 	git init
+	git add .
+	git commit -m "commit message"
+	heroku git:remote -a nodejs-web-app-project
+	git push heroku master
+
+7. take the address (ex: https://sampleforproject.herokuapp.com/)
+	then go to postman and do some request (GET for ex.)
+
+8. To find errors and bugs, view heroku logs: heroku logs
+
+9. To set environment variable: heroku config: set attribute=value
+	heroku config:set PORT=8080
+	heroku config:set project_db=mongodb+srv://project:159357@project-cluster.rnix9.mongodb.net/project
+
+10. mongodb cluster link for connection in compass and in app code:
+mongodb+srv://project:159357@project-cluster.rnix9.mongodb.net/project

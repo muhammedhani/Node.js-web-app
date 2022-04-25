@@ -13,8 +13,8 @@ mongoose
 	});
 
 // PORTs
-// const port = process.env.PORT || 8080;
-const port = 8080;
+const port = process.env.PORT || 8080; // must be for deployment on heroku
+// const port = 8080;
 app.listen(port, () => {
 	console.log('Server is running!!');
 	console.log(`Listening on port ${port}`);
